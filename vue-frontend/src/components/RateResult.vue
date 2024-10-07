@@ -6,9 +6,7 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
-
-const props = defineProps({
+defineProps({
   calculatedRate: {
     type: String,
     required: true
