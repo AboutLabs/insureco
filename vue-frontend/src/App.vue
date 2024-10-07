@@ -14,7 +14,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import AppHeader from './components/Header.vue'
+import AppHeader from './components/AppHeader.vue'
 import HeroSection from './components/HeroSection.vue'
 import RateCalculatorForm from './components/RateCalculatorForm.vue'
 import RateResult from './components/RateResult.vue'
