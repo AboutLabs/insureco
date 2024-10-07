@@ -7,9 +7,12 @@
     "backend": "cd feathers-backend && npm run dev",
     "dev": "concurrently \"npm run frontend\" \"npm run backend\""
   },
-  "dependencies": {},
   "devDependencies": {
-    "concurrently": "^6.0.0"
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^6.0.0",
+    "postcss": "^8.4.47",
+    "postcss-loader": "^8.1.1",
+    "tailwindcss": "^3.4.13"
   },
   "author": "Simon Aumayer",
   "license": "MIT"
