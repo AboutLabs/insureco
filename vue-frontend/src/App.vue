@@ -7,7 +7,14 @@
           <font-awesome-icon icon="fa-regular fa-handshake" class="text-3xl text-blue-500 mr-2" />
           <span class="text-xl font-bold text-gray-800">InsureCo</span>
         </div>
-        <!-- Rest of the header content remains the same -->
+        <nav class="hidden md:flex space-x-4">
+          <a href="#" class="text-gray-600 hover:text-gray-800">About Us</a>
+          <a href="#" class="text-gray-600 hover:text-gray-800">Services</a>
+          <a href="#" class="text-gray-600 hover:text-gray-800">Contact</a>
+        </nav>
+        <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
+          Login / Register
+        </button>
       </div>
     </header>
 
@@ -123,6 +130,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import './assets/index.css'
 
 const calculatorSection = ref(null)
