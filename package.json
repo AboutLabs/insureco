@@ -1,0 +1,16 @@
+{
+  "name": "vue-feathers-insurance-app",
+  "version": "1.0.0",
+  "description": "A Vue.js frontend and Feathers.js backend for insurance rate calculation",
+  "scripts": {
+    "frontend": "cd vue-frontend && npm run serve",
+    "backend": "cd feathers-backend && npm run dev",
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^6.0.0"
+  },
+  "author": "Simon Aumayer",
+  "license": "MIT"
+}

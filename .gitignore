@@ -1,0 +1,59 @@
+# Node modules (both frontend and backend)
+node_modules/
+my-app/node_modules/
+feathers-backend/node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+/node_modules
+/.pnp
+.pnp.js
+
+# Build output
+my-app/dist/
+feathers-backend/public/
+feathers-backend/public/*    # If the frontend build files are copied to this directory
+
+# Environment variable files
+.env
+my-app/.env
+feathers-backend/.env
+
+# Vue.js specific
+my-app/.cache/
+my-app/.temp/
+my-app/.idea/
+my-app/.vscode/
+my-app/.DS_Store
+
+# IDE settings and system files
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Operating system files
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*~
+*.pid
+
+# macOS system files
+*.DS_Store
+
+# Google Cloud and other deployment-specific files
+.gcloud/
+.aider*
