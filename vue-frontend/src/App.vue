@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen bg-gray-100">
-    <Header />
+    <AppHeader />
     <HeroSection @scrollToCalculator="scrollToCalculator" />
     <section ref="calculatorSection" class="py-16">
       <div class="container mx-auto px-4">
@@ -14,7 +14,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import Header from './components/Header.vue'
+import AppHeader from './components/Header.vue'
 import HeroSection from './components/HeroSection.vue'
 import RateCalculatorForm from './components/RateCalculatorForm.vue'
 import RateResult from './components/RateResult.vue'
