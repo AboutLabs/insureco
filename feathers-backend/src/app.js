@@ -1031,4 +1031,72 @@ app.on('error', (err) => {
 
 // Register a middleware that handles uncaught errors
 app.use((err, req, res, next) => {
-  logger.error(err
+  logger.error(err);
+  res.status(500).json({
+    message: 'Internal server error',
+    code: 'INTERNAL_SERVER_ERROR'
+  });
+});
+
+// Register a middleware that handles unhandled rejections
+app.on('error', (err) => {
+  logger.error(err);
+  process.exit(1);
+});
+
+// Register a middleware that handles uncaught errors
+app.use((err, req, res, next) => {
+  logger.error(err);
+  res.status(500).json({
+    message: 'Internal server error',
+    code: 'INTERNAL_SERVER_ERROR'
+  });
+});
+
+// Register a middleware that handles unhandled rejections
+app.on('error', (err) => {
+  logger.error(err);
+  process.exit(1);
+});
+
+// Register a middleware that handles uncaught errors
+app.use((err, req, res, next) => {
+  logger.error(err);
+  res.status(500).json({
+    message: 'Internal server error',
+    code: 'INTERNAL_SERVER_ERROR'
+  });
+});
+
+// Register a middleware that handles unhandled rejections
+app.on('error', (err) => {
+  logger.error(err);
+  process.exit(1);
+});
+
+// Register a middleware that handles uncaught errors
+app.use((err, req, res, next) => {
+  logger.error(err);
+  res.status(500).json({
+    message: 'Internal server error',
+    code: 'INTERNAL_SERVER_ERROR'
+  });
+});
+
+// Register a middleware that handles unhandled rejections
+app.on('error', (err) => {
+  logger.error(err);
+  process.exit(1);
+});
+
+// Register a middleware that handles uncaught errors
+app.use((err, req, res, next) => {
+  logger.error(err);
+  res.status(500).json({
+    message: 'Internal server error',
+    code: 'INTERNAL_SERVER_ERROR'
+  });
+});
+
+// Register a middleware that handles unhandled rejections
+app.on('error', (err
