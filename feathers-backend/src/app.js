@@ -1099,4 +1099,4 @@ app.use((err, req, res, next) => {
 });
 
 // Register a middleware that handles unhandled rejections
-app.on('error', (err
+app.on('error
