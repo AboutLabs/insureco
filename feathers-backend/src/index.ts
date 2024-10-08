@@ -7,7 +7,10 @@ async function startServer() {
     // Log when the server is ready
     server.on('listening', () => {
       const address = server.address();
-      const port = typeof address === 'string' ? address : address.port;
+      let port = 3030; // Default port
+      if (address) {
+        port = typeof address === 'string' ? address : address.port;
+      }
       console.log(`Feathers app started on http://localhost:${port}`);
     });
 
