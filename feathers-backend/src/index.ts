@@ -5,9 +5,11 @@ async function startServer() {
     const server = await app.listen(app.get('port') || 3030);  // Await the listen promise
 
     // Log when the server is ready
-    server.on('listening', () =>
-      console.log(`Feathers app started on http://localhost:${server.address().port}`)
-    );
+    server.on('listening', () => {
+      const address = server.address();
+      const port = typeof address === 'string' ? address : address.port;
+      console.log(`Feathers app started on http://localhost:${port}`);
+    });
 
     // Handle server errors
     server.on('error', (error: any) => {
