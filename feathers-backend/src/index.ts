@@ -10,6 +10,7 @@ async function startServer() {
       let port = 3030; // Default port
       if (address) {
         port = typeof address === 'string' ? address : address.port;
+        port = Number(port); // Convert port to a number
       }
       console.log(`Feathers app started on http://localhost:${port}`);
     });
