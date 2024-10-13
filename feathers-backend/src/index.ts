@@ -1,20 +1,16 @@
-import { app } from './app';  // Import the named export from app.ts
+import { app } from './app';
 
 async function startServer() {
   try {
-    const server = await app.listen(app.get('port') || 3030);  // Await the listen promise
+    const port = app.get('port') || 3030;
+    if (typeof port !== 'number') {
+      throw new Error('Invalid port number');
+    }
+
+    const server = await app.listen(port);
 
     // Log when the server is ready
     server.on('listening', () => {
-      const address = server.address();
-      let port = 3030; // Default port
-      if (address) {
-        if (typeof address === 'string') {
-          port = Number(address);
-        } else {
-          port = address.port;
-        }
-      }
       console.log(`Feathers app started on http://localhost:${port}`);
     });
 
