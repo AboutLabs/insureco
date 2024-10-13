@@ -11,7 +11,11 @@ import { postgresql } from './postgresql'
 import { services } from './services/index'
 import { channels } from './channels'
 
+console.log('Starting app creation in app.ts');
+
 const app: Application = koa(feathers())
+
+console.log('App created in app.ts:', app);
 
 // Load our app configuration (see config/ folder)
 app.configure(configuration(configurationValidator))
@@ -51,4 +55,5 @@ app.hooks({
   teardown: []
 })
 
-export { app }
+console.log('Exporting app from app.ts:', app);
+export default app;
